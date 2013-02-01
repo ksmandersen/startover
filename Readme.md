@@ -41,7 +41,7 @@ This will setup a Pow virtual host and generate the necessary files and director
 
     rake setup["mysite"]
 
-This will create the host ``mysite.dev``. If you're using zsh like me then remember to unescape the brackets (``rake setup\\\["mysite"\\\]``). To start watching for changes with compass you can run:
+This will create the host ``mysite.dev``. If you're using zsh like me then remember to unescape the brackets (``rake setup\["mysite"\]``). To start watching for changes with compass you can run:
 
     rake watch
 
