@@ -9,6 +9,26 @@ of others like [html5boilerplate](http://html5boilerplate.com/). However none of
 been quite right for me. I like things minimal and agile. This is why **Startover is not for everyone**. I created Startover
 to fit my workflow with the tools I frequently use when developing websites.
 
+A few disclaimeres:
+
+* Startover is based on my workflow and how I work with static site development. I don't expect the code to be usable for anyone else but if you can use it that makes me happy!
+* The code in this repository is mostly not documented. That means if you have no idea what some of the code do or just have a question, then just open up a new issue and I will try to respond.
+* I use a mac for development therefore some of the code in this repository will assume the same. If you're on Windows or Linux well then good luck!
+
+## Usage
+
+Get a copy of the repository onto your machine. You can do that either by cloning the repository like so:
+
+    git clone https://github.com/ksmandersen/startover.git
+
+or you can just grab a [zip of the latest version](https://github.com/ksmandersen/startover/archive/master.zip). From here you can either just work with the code as it is and setup stuff manually or you can use rake. To get rolling with rake, make sure it is installed and then run this command:
+
+    rake setup
+
+This will setup a Pow virtual host and generate the necessary files and directories. To start watching for changes with compass you can run:
+
+    rake watch
+
 ## Compass
 
 If you write a lot of CSS there are a lot of tools out there that can hugely speed up your process. [Compass](http://compass-style.org) is one of these tools. It uses the [Sass](http://sass-lang.com) syntax and gives you stuff like nested rules, variables, mixins, inheritance and much more. In addition to the nice syntax it also gives you a huge framework for dealing with CSS3 compatabiliy issues between browsers.
