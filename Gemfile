@@ -1,3 +1,5 @@
 gem 'rack'
 gem 'rack-contrib'
 gem 'rack-rewrite'
+gem 'rake'
+gem 'compass'

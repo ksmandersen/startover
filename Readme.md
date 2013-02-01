@@ -15,13 +15,25 @@ A few disclaimeres:
 * The code in this repository is mostly not documented. That means if you have no idea what some of the code do or just have a question, then just open up a new issue and I will try to respond.
 * I use a mac for development therefore some of the code in this repository will assume the same. If you're on Windows or Linux well then good luck!
 
+## Requirements
+
+You need to have the following installed to use the code in this repository:
+
+* [Ruby](http://www.ruby-lang.org/)
+* [Rubygems](http://rubygems.org/)
+* [Pow](http://pow.cx)
+
 ## Usage
 
 Get a copy of the repository onto your machine. You can do that either by cloning the repository like so:
 
     git clone https://github.com/ksmandersen/startover.git
 
-or you can just grab a [zip of the latest version](https://github.com/ksmandersen/startover/archive/master.zip). From here you can either just work with the code as it is and setup stuff manually or you can use rake. To get rolling with rake, make sure it is installed and then run this command:
+or you can just grab a [zip of the latest version](https://github.com/ksmandersen/startover/archive/master.zip). To make sure you have all the needed gems on your machine you can run the bundle command:
+
+    bundle
+
+From here you can either just work with the code as it is and setup stuff manually or you can use rake. To get rolling with rake, make sure it is installed and then run this command:
 
     rake setup
 
