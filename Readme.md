@@ -26,10 +26,11 @@ Compass will tell automatically generate a new stylesheet each time you save tou
 
 ### Plugins
 
+There are a couple of tools and extensions for compass that can make your life easier depending on the task at hand.
+
 #### Bless
 
-There are a couple of tools and extensions for compass that can make your life easier depending on the task at hand. If you have
-a site with a huge amount of CSS rules you might wan't to install [Bless](http://blesscss.com). Bless can split your stylesheets into several files to get around the [IE CSS Selector Limit](http://stackoverflow.com/questions/9906794/internet-explorers-css-rules-limits). You can easily install Bless with [npm](http://npmjs.org/) like so:
+If you have a site with a huge amount of CSS rules you might wan't to install [Bless](http://blesscss.com). Bless can split your stylesheets into several files to get around the [IE CSS Selector Limit](http://stackoverflow.com/questions/9906794/internet-explorers-css-rules-limits). You can easily install Bless with [npm](http://npmjs.org/) like so:
 
     (sudo) npm install bless -g
 
