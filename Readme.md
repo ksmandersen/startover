@@ -1,6 +1,6 @@
 # Startover
 
-Startover is a boilerplate for creating static websites using html5, Compass (SASS) and jQuery. With Startover you don't have to start over!
+Startover is a boilerplate for developing static websites on your Mac using HTML5, Compass, Pow and jQuery. With Startover you don't have to start over!
 
 ## Another boilerplate?
 
