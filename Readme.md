@@ -9,9 +9,7 @@ of others like [html5boilerplate](http://html5boilerplate.com/). However none of
 been quite right for me. I like things minimal and agile. This is why **Startover is not for everyone**. I created Startover
 to fit my workflow with the tools I frequently use when developing websites.
 
-## Components
-
-### Compass
+## Compass
 
 If you write a lot of CSS there are a lot of tools out there that can hugely speed up your process. [Compass](http://compass-style.org) is one of these tools. It uses the [Sass](http://sass-lang.com) syntax and gives you stuff like nested rules, variables, mixins, inheritance and much more. In addition to the nice syntax it also gives you a huge framework for dealing with CSS3 compatabiliy issues between browsers.
 
@@ -26,9 +24,9 @@ Once installed you can start generating stylesheets by navigating to your projec
 
 Compass will tell automatically generate a new stylesheet each time you save tou sass files.
 
-#### Plugins
+### Plugins
 
-**Bless:**
+#### Bless
 
 There are a couple of tools and extensions for compass that can make your life easier depending on the task at hand. If you have
 a site with a huge amount of CSS rules you might wan't to install [Bless](http://blesscss.com). Bless can split your stylesheets into several files to get around the [IE CSS Selector Limit](http://stackoverflow.com/questions/9906794/internet-explorers-css-rules-limits). You can easily install Bless with [npm](http://npmjs.org/) like so:
@@ -43,19 +41,19 @@ When you have Bless installed navigate to the compass configuration file ([confi
 
 Depending on how you installed Bless and your $PATH you might need to specify the full path for blessc above.
 
-**HiDPI:**
+#### HiDPI
 
 If you have to serve images for retina devices like the iPhone, iPad or Retina macs you might wan't to use the [HiDpi](git.io/hidpi) mixin for Compass. The mixin is bundled with Startover. All you have to do is uncomment the include statement in the [main.scss](main.scss) file.
 
-**Susy:**
+## Susy
 
 Finally, if you need to develop a grid based responsive site you should totally check out [Susy](http://susy.oddbird.net). It installs just as easy as compass like so:
 
     (sudo) gem install susy
 
-### Pow
+## Pow
 
-Installing and setting up a local webserver for hosting your new project is a pain in the A\*\*. Right? Wrong! [Pow](http://pow.cx) is the ultimate tool wheen it comes to developing static websites on your Mac. Pow will take any static site or Rails app you throw at it and turn it into ``mysite.dev`` URL that you can access in your browser. Setting up Pow can be done just by running a single command:
+Installing and setting up a local webserver for hosting your new project is a pain in the A\*\*. Right? Wrong! [Pow](http://pow.cx) is the ultimate tool wheen it comes to developing static websites on your Mac. Pow will take any static site or Rails app you throw at it and turn it into a ``mysite.dev`` URL that you can access in your browser. Setting up Pow can be done just by running a single command:
 
     curl get.pow.cx | sh
 
@@ -64,7 +62,11 @@ Once installed just set up an alias for your project like so:
     cd ~/.pow
     ln -s /path/to/mysite
 
-Now you're all set. Go make some awesome websites!
+### Debugging remotely
+
+With pow and [xip.io](http://xip.io) you can reach your websites from any device within your local network. Say your local website is at ``mysite.dev`` and your local ip address is ``192.168.1.100`` then you pick your iPad and go to ``http://myapp.192.178.1.100.xip.io`` and test your website.
+
+If you need to test your site outside your local network you can do that to using [Forward](https://forwardhq.com/). The service is paid but definitely worth every penny.
 
 ## Legal
 
