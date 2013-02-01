@@ -20,6 +20,16 @@ installed. You can do so like so:
 
     (sudo) gem install compass
 
+Once installed you can start generating stylesheets by navigating to your project in the terminal and running the watch command:
+
+    compass watch
+
+Compass will tell automatically generate a new stylesheet each time you save tou sass files.
+
+#### Plugins
+
+**Bless:**
+
 There are a couple of tools and extensions for compass that can make your life easier depending on the task at hand. If you have
 a site with a huge amount of CSS rules you might wan't to install [Bless](http://blesscss.com). Bless can split your stylesheets into several files to get around the [IE CSS Selector Limit](http://stackoverflow.com/questions/9906794/internet-explorers-css-rules-limits). You can easily install Bless with [npm](http://npmjs.org/) like so:
 
@@ -33,7 +43,11 @@ When you have Bless installed navigate to the compass configuration file ([confi
 
 Depending on how you installed Bless and your $PATH you might need to specify the full path for blessc above.
 
+**HiDPI:**
+
 If you have to serve images for retina devices like the iPhone, iPad or Retina macs you might wan't to use the [HiDpi](git.io/hidpi) mixin for Compass. The mixin is bundled with Startover. All you have to do is uncomment the include statement in the [main.scss](main.scss) file.
+
+**Susy:**
 
 Finally, if you need to develop a grid based responsive site you should totally check out [Susy](http://susy.oddbird.net). It installs just as easy as compass like so:
 
