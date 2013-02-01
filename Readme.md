@@ -55,6 +55,17 @@ Finally, if you need to develop a grid based responsive site you should totally 
 
 ### Pow
 
+Installing and setting up a local webserver for hosting your new project is a pain in the A\*\*. Right? Wrong! [Pow](http://pow.cx) is the ultimate tool wheen it comes to developing static websites on your Mac. Pow will take any static site or Rails app you throw at it and turn it into ``mysite.dev`` URL that you can access in your browser. Setting up Pow can be done just by running a single command:
+
+    curl get.pow.cx | sh
+
+Once installed just set up an alias for your project like so:
+
+    cd ~/.pow
+    ln -s /path/to/mysite
+
+Now you're all set. Go make some awesome websites!
+
 ## Legal
 
 The source code for this project is released under the Open Source MIT License.
