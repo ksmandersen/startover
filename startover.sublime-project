@@ -1,0 +1,10 @@
+{
+	"folders":
+	[
+		{
+			"path": "/Users/ksma/Projects/startover/public",
+      "folder_exclude_patterns": [".sass-cache", "js/min"],
+      "file_exclude_patterns": ["codekit-config.json", "config.rb"]
+		}
+	]
+}
