@@ -16,9 +16,9 @@ images_dir        = "images"
 javascripts_dir   = "js"
 
 # Run bless. See http://blesscss.com/
-on_stylesheet_saved do |filename|
-    system('blessc',filename,'-f')
-end
+# on_stylesheet_saved do |filename|
+#     system('blessc',filename,'-f')
+# end
 
 # For responsive grid sites use susy
 #require "susy"
