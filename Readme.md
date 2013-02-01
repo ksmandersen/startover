@@ -45,7 +45,7 @@ Depending on how you installed Bless and your $PATH you might need to specify th
 
 If you have to serve images for retina devices like the iPhone, iPad or Retina macs you might wan't to use the [HiDpi](git.io/hidpi) mixin for Compass. The mixin is bundled with Startover. All you have to do is uncomment the include statement in the [main.scss](main.scss) file.
 
-## Susy
+#### Susy
 
 Finally, if you need to develop a grid based responsive site you should totally check out [Susy](http://susy.oddbird.net). It installs just as easy as compass like so:
 
