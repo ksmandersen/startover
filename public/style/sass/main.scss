@@ -1,0 +1,31 @@
+@import "compass/reset";
+@import "compass/css3";
+
+@import "_hidpi.scss";
+
+@include global-reset;
+
+body {
+
+}
+
+.container {
+  margin: 0 auto;
+  width: 580px;
+}
+
+.header {
+
+}
+
+.content {
+
+}
+
+.footer {
+
+}
+
+.clearboth {
+  clear: both;
+}
