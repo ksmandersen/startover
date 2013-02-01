@@ -58,7 +58,7 @@ Once installed you can start generating stylesheets by navigating to your projec
 
     compass watch
 
-Compass will tell automatically generate a new stylesheet each time you save tou sass files.
+Compass will tell automatically generate a new stylesheet each time you save tou sass files. Startover already has a [config](config.rb) file for Compass bundled. The default sass file is [main.sccs](style/sass/main.sccs). Compiled stylesheets are located in [style/css](style/css).
 
 ### Plugins
 
