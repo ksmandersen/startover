@@ -3,7 +3,7 @@ project_type      = :stand_alone
 environment       = :production
 http_path         = "/"
 
-output_style      = :compressed
+output_style      = (environment == :production) ? :compressed : :expanded
 line_comments     = false
 preferred_syntax  = :scss
 relative_assets   = false
@@ -20,6 +20,5 @@ on_stylesheet_saved do |filename|
     system('blessc',filename,'-f')
 end
 
-output_style = :compressed
-# To enable relative paths to assets via compass helper functions. Uncomment:
-# relative_assets = true
+# For responsive grid sites use susy
+#require "susy"

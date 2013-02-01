@@ -1,12 +1,23 @@
 @import "compass/reset";
 @import "compass/css3";
 
-@import "_hidpi.scss";
+// Retina support provided by the
+// HiDPI mixin. See git.io/hidpi
+// @import "_hidpi.scss";
+
+// Responsive grid support provided
+// by Susy. See http://susy.oddbird.net/
+// @import "susy";
+
+// Default site variables
+$default_font: 'Helvetica Neue', Helvetica, sans-serif;
+$default_size: 14px;
+
 
 @include global-reset;
 
 body {
-
+  font: $default_size $default_font;
 }
 
 .container {
