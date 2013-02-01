@@ -11,9 +11,33 @@ to fit my workflow with the tools I frequently use when developing websites.
 
 ## Components
 
-### HTML5
-
 ### Compass
+
+If you write a lot of CSS there are a lot of tools out there that can hugely speed up your process. [Compass](http://compass-style.org) is one of these tools. It uses the [Sass](http://sass-lang.com) syntax and gives you stuff like nested rules, variables, mixins, inheritance and much more. In addition to the nice syntax it also gives you a huge framework for dealing with CSS3 compatabiliy issues between browsers.
+
+Startover is hugely built around the use of compass because it's totally awesome! To get rolling you'll have to have compass
+installed. You can do so like so:
+
+    (sudo) gem install compass
+
+There are a couple of tools and extensions for compass that can make your life easier depending on the task at hand. If you have
+a site with a huge amount of CSS rules you might wan't to install [Bless](http://blesscss.com). Bless can split your stylesheets into several files to get around the [IE CSS Selector Limit](http://stackoverflow.com/questions/9906794/internet-explorers-css-rules-limits). You can easily install Bless with [npm](http://npmjs.org/) like so:
+
+    (sudo) npm install bless -g
+
+When you have Bless installed navigate to the compass configuration file ([config.rb](config.rb)) and uncomment the following lines:
+
+    on_stylesheet_saved do |filename|
+        system('blessc',filename,'-f')
+    end
+
+Depending on how you installed Bless and your $PATH you might need to specify the full path for blessc above.
+
+If you have to serve images for retina devices like the iPhone, iPad or Retina macs you might wan't to use the [HiDpi](git.io/hidpi) mixin for Compass. The mixin is bundled with Startover. All you have to do is uncomment the include statement in the [main.scss](main.scss) file.
+
+Finally, if you need to develop a grid based responsive site you should totally check out [Susy](http://susy.oddbird.net). It installs just as easy as compass like so:
+
+    (sudo) gem install susy
 
 ### Pow
 
