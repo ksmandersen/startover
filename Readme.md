@@ -44,7 +44,7 @@ Depending on how you installed Bless and your $PATH you might need to specify th
 
 #### HiDPI
 
-If you have to serve images for retina devices like the iPhone, iPad or Retina macs you might wan't to use the [HiDpi](git.io/hidpi) mixin for Compass. The mixin is bundled with Startover. All you have to do is uncomment the include statement in the [main.scss](main.scss) file.
+If you have to serve images for retina devices like the iPhone, iPad or Retina macs you might wan't to use the [HiDpi](git.io/hidpi) mixin for Compass. The mixin is bundled with Startover. All you have to do is uncomment the include statement in the [style/sass/main.scss](main.scss) file.
 
 #### Susy
 
