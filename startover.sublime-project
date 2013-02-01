@@ -2,9 +2,9 @@
 	"folders":
 	[
 		{
-			"path": "/Users/ksma/Projects/startover/public",
+			"path": "/Users/ksma/Projects/startover",
       "folder_exclude_patterns": [".sass-cache", "js/min"],
-      "file_exclude_patterns": ["codekit-config.json", "config.rb"]
+      "file_exclude_patterns": ["*.sublime*", "Gemfile*", "Rakefile"]
 		}
 	]
 }
