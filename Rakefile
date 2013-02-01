@@ -2,15 +2,20 @@ require 'rubygems'
 require 'compass'
 
 desc "Setup a new static site with Pow"
-task :setup do
+task :setup, :name do | t, args |
   puts "# Setting up new site..."
+  puts args
 
   if !FileTest.directory?(ENV['HOME'] + "/.pow") then
     abort("# Aborted!\n#\n# You need to install Pow before setting up the site.\n# Run the Pow installtion command like so:\n# curl get.pow.cx | sh")
   end
 
   current_dir = Dir.getwd
-  project_name = File.basename(current_dir)
+  if args[:name] then
+    project_name = args[:name]
+  else
+    project_name = File.basename(current_dir)
+  end
 
   puts "# Installing virtual host with pow"
   if File.exists?(ENV['HOME'] +"/.pow/#{project_name}") then
