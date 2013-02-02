@@ -21,7 +21,10 @@ You need to have the following installed to use the code in this repository:
 
 * [Ruby](http://www.ruby-lang.org/)
 * [Rubygems](http://rubygems.org/)
+* [Compass](http://compass-style.org)
 * [Pow](http://pow.cx)
+* [NPM (Node Package manager)](https://npmjs.org/)
+* [UglifyJS2](https://github.com/mishoo/UglifyJS2)
 
 ## Usage
 
@@ -44,6 +47,12 @@ This will setup a Pow virtual host and generate the necessary files and director
 This will create the host ``mysite.dev``. If you're using zsh like me then remember to unescape the brackets (``rake setup\["mysite"\]``). To start watching for changes with compass you can run:
 
     rake watch
+
+Once ready for production you should run the generate command to compile and compress your stylesheets and javascript.
+
+    rake generate
+
+After generating make sure you include the minified and compressed javascript files in your HTML. The minified files will be located in ``js/min``.
 
 ## Compass
 
@@ -87,6 +96,18 @@ If you have to serve images for retina devices like the iPhone, iPad or Retina m
 Finally, if you need to develop a grid based responsive site you should totally check out [Susy](http://susy.oddbird.net). It installs just as easy as compass like so:
 
     (sudo) gem install susy
+
+## Javascript and Uglify
+
+Startover uses the [UglifyJS2](https://github.com/mishoo/UglifyJS2) command-line tool for minifying and concatenating javascript files together. Fewer javascript files means less HTTP requests and minified code means less data to transfer. You'll need to have [NPM](https://npmjs.org/) installed before installing UglifyJS2. To install the command line version of the library run this command:
+
+    (sudo) npm install ufligy-js -g
+
+To generate the uglifeid javascript file for inclusion in your project run the generate command:
+
+    rake generate
+
+Don't forget to include the minified version from your HTML.
 
 ## Pow
 

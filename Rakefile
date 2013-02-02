@@ -34,8 +34,13 @@ end
 
 desc "Generate a production ready website"
 task :generate do
+  current_dir = Dir.getwd
+
   puts "# Generating site..."
+  puts "# Compiling stylsheets with compass"
   system "compass compile -e production"
+  puts "# Minifying and concatenating javascript with uglifyjs"
+  system "uglifyjs " + current_dir + "/js/*.js -o " + current_dir + "/js/min/main.min.js -c -m --stats"
 end
 
 desc "Watch the site and regenerate when it changes"

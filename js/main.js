@@ -36,4 +36,4 @@ $(document).ready(function() {
   if (ie) {
     $('html').addClass('ie');
   }
-};
+});

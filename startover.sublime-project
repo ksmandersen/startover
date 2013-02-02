@@ -3,7 +3,7 @@
 	[
 		{
 			"path": "/Users/ksma/Projects/startover",
-      "folder_exclude_patterns": [".sass-cache", "js/min"],
+      "folder_exclude_patterns": [".sass-cache"],
       "file_exclude_patterns": ["*.sublime*"]
 		}
 	]
