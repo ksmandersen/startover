@@ -117,7 +117,7 @@ Installing and setting up a local webserver for hosting your new project is a pa
 
 Once installed just set up an alias for your project like so:
 
-    rake setup \["mysite"\]
+    rake setup ["mysite"]
 
 Startover has a custom rackup configuration to avoid the use of a public folder that would otherwise be necessary with Pow. If you need access more folders within the project other tham ``/fonts``. ``/images``. ``/js`` and ``/style`` you will need to configure the rackup server. To do so take a look at [config.ru](config.ru).
 
