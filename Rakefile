@@ -27,6 +27,7 @@ task :setup, :name do | t, args |
   puts "# Setting up folder structure"
   Dir.mkdir("#{current_dir}/images") unless File.exists?("#{current_dir}/images")
   Dir.mkdir("#{current_dir}/fonts") unless File.exists?("#{current_dir}/fonts")
+  Dir.mkdir("#{current_dir}/js/min") unless File.exists?("#{current_dir}/js/min")
 
   puts "# Generating stylesheets"
   system "compass compile -e production"
