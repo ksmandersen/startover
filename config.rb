@@ -9,11 +9,11 @@ preferred_syntax  = :scss
 relative_assets   = false
 
 # File locations
-css_dir           = "style/css"
+css_dir           = "static/css"
 sass_dir          = "style/sass"
 fonts_dir         = "fonts"
-images_dir        = "images"
-javascripts_dir   = "js"
+images_dir        = "static/images"
+javascripts_dir   = "static/js"
 
 # Run bless. See http://blesscss.com/
 # on_stylesheet_saved do |filename|
