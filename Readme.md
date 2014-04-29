@@ -1,3 +1,7 @@
+# Important Notice
+
+This project is no longer actively maintained. I have since started using [Hammer for Mac](http://hammerformac.com/) which provides much more functionality.
+
 # Startover
 
 Startover is a boilerplate for developing static websites on your Mac using HTML5, Compass, Pow and jQuery. With Startover you don't have to start over!
