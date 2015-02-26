@@ -1,0 +1,22 @@
+site_name: example.com
+
+s3_id: <%= ENV['S3_ACCESS_KEY_ID'] %>
+s3_secret: <%= ENV['S3_SECRET_ACCESS_KEY'] %>
+s3_bucket: site_name
+
+# cloudfront_distribution_id: <%= ENV['CF_DIST_ID']  %>
+
+site: public
+
+max_age:
+    "*": 300
+
+gzip: true
+
+ignore_on_server: downloads
+
+cloudfront_distribution_config:
+    aliases:
+        quantity: 1
+        items:
+            CNAME: site_name

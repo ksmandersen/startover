@@ -1,0 +1,12 @@
+@mixin retina-hover($name, $size, $type: "png", $hover-suffix: "-hover", $retina-suffix: "_2x") {
+	$hover: $name + $hover-suffix;
+
+	@include retina-image($name, $size); 
+
+	&:hover { @include retina-image($hover, $size); }
+	&:after {
+		display: none;
+		content: image-url($hover + "." + $type);
+		@include hidpi { content: image-url($hover + $retina-suffix + "." + $type); }
+	}
+}
