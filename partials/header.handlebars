@@ -19,9 +19,9 @@
     	
         <link rel='stylesheet' href='/css/main.css'>
 
-        {{#if !config.production }}
+        {{#unless config.production }}
             {{> reload }}
-        {{#/if}}
+        {{/unless}}
     
         <link rel="image_src" href="/apple-touch-icon.png" /> 
         <link rel="shortcut icon" href="/favicon.ico" />
