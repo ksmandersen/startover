@@ -1,12 +1,14 @@
 gulp = require 'gulp'
+tap = require 'gulp-tap'
 gutil = require 'gulp-util'
 plumber = require 'gulp-plumber'
 runSeqeuence = require 'run-sequence'
 gif = require 'gulp-if'
+order = require 'gulp-order'
 
 rename = require 'gulp-rename'
 fs = require 'fs'
-clean = require 'gulp-clean'
+clean = require 'gulp-rimraf'
 copy = require 'gulp-copy'
 
 handlebars = require 'gulp-compile-handlebars'
@@ -91,7 +93,7 @@ gulp.task 'jsvendor', ->
 	gulp.src(paths.js)
 		.pipe(sourcemaps.init())
 		.pipe(order([
-			
+			'jquery.js'
 		]))
 		.pipe(concat('vendor.js'))
 		.pipe(gif(config.production, uglify()))
