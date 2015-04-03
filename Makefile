@@ -1,3 +1,7 @@
+dependencies:
+	npm install \
+	&& bower install
+
 install:
 	make clean \
 	&& npm install \
