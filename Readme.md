@@ -18,6 +18,8 @@ Here are some sites that was built with Startover:
 
 * [robo.cat](http://robo.cat/) ([Source](http://github.com/robocat/robo.cat))
 * [itsbreaking.com](http://itsbreaking.com/) ([Source](http://github.com/robocat/itsbreaking.com))
+* [thermodo.com](http://thermodo.com/) ([Source](http://github.com/robocat/thermodo.com))
+* [televisedapp.com](http://televisedapp.com/) ([Source](http://github.com/robocat/televisedapp.com))
 * [designdk.co](http://designdk.co/) ([Source](http://github.com/ksmandersen/designdk))
 
 ## Requirements
