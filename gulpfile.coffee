@@ -40,12 +40,7 @@ paths = {
 	# Coffeescript files
 	coffee: "assets/js/**/*.coffee",
 	# Javascript files
-	js: ["{assets/js/**/*.js,components/**/dist/*.js}", "!components/**/*.min.js"],
-	# components: {
-	# 	"jquery": "components/jquery/dist/jquery.js",
-	# 	"retinajs": "components/jquery/dist/jquery.js"
-	# }
-	# Image files
+	js: ["assets/js/**/*.js", "components/**/dist/*.js", "!components/**/*.min.js"],
 	images: "assets/images/**/*.{jpg,png}"
 }
 
@@ -58,7 +53,6 @@ plumber = require 'gulp-plumber'
 runSeqeuence = require 'run-sequence'
 gif = require 'gulp-if'
 order = require 'gulp-order'
-bower = require 'gulp-bower'
 
 rename = require 'gulp-rename'
 fs = require 'fs'
@@ -95,11 +89,6 @@ readPartial = (name) ->
 	val = fs.readFileSync path, 'utf8' if isFile path
 
 	val
-
-# Install/update bower dependencies
-gulp.task 'bower', ->
-	bower()
-		.pipe(gulp.dest('components'))
 
 # Delete all files in the output directory
 gulp.task 'clean', (cb) ->
