@@ -1,0 +1,7 @@
+.cont {
+	width: 100%;
+}
+
+.int {
+	@include outer-container;
+}
