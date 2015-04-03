@@ -6,7 +6,3 @@ gem 'powder'
 
 # https://github.com/laurilehmijoki/s3_website
 gem 's3_website'
-
-# Bourbon and neat
-gem 'bourbon'
-gem 'neat'

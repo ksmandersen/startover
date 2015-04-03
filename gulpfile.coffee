@@ -36,11 +36,15 @@ paths = {
 	# Template handlebar files
 	handlebars: "./{**/,}*.handlebars",
 	# Sass files
-	sass: "assets/css/{**/,}*.{scss,sass}",
+	sass: "assets/css/**/*.{scss,sass}",
 	# Coffeescript files
 	coffee: "assets/js/**/*.coffee",
 	# Javascript files
-	js: "assets/js/**/*.js",
+	js: ["{assets/js/**/*.js,components/**/dist/*.js}", "!components/**/*.min.js"],
+	# components: {
+	# 	"jquery": "components/jquery/dist/jquery.js",
+	# 	"retinajs": "components/jquery/dist/jquery.js"
+	# }
 	# Image files
 	images: "assets/images/**/*.{jpg,png}"
 }
@@ -54,10 +58,11 @@ plumber = require 'gulp-plumber'
 runSeqeuence = require 'run-sequence'
 gif = require 'gulp-if'
 order = require 'gulp-order'
+bower = require 'gulp-bower'
 
 rename = require 'gulp-rename'
 fs = require 'fs'
-clean = require 'gulp-rimraf'
+clean = require 'del'
 copy = require 'gulp-copy'
 
 handlebars = require 'gulp-compile-handlebars'
@@ -91,11 +96,14 @@ readPartial = (name) ->
 
 	val
 
+# Install/update bower dependencies
+gulp.task 'bower', ->
+	bower()
+		.pipe(gulp.dest('components'))
+
 # Delete all files in the output directory
 gulp.task 'clean', (cb) ->
-	gulp.src(build_path)
-		.pipe(plumber { errorHandler: onError } )
-		.pipe(clean { force: false, read: true } )
+	clean(build_path)
 
 # Compile Coffesscript files, generate source maps and
 # concat into app.js
@@ -115,7 +123,10 @@ gulp.task 'jsvendor', ->
 	gulp.src(paths.js)
 		.pipe(sourcemaps.init())
 		.pipe(order([
-			'jquery.js'
+			'components/retinajs/dist/retina.js',
+			'components/jquery/dist/retina.js'
+			# 'retina.js',
+			# 'jquery.js'
 		]))
 		.pipe(concat('vendor.js'))
 		.pipe(gif(config.production, uglify()))
@@ -142,7 +153,7 @@ gulp.task 'copy', ->
 
 # Compile Sass into css
 gulp.task 'sass', ->
-	sass_paths = ['./assets/css/vendor/bourbon', './assets/css/vendor/neat']
+	sass_paths = ['./components/bourbon/app/assets/stylesheets', './components/neat/app/assets/stylesheets']
 	sass_config = { 
 		includePaths:  sass_paths,
 		imagePath: config.imgpath
