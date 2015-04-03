@@ -1,3 +1,52 @@
+# Configuration variables.
+# These are passed to the handelbar templates
+config = {
+	port: 9091,
+	host: "localhost"
+	production: false
+	imgpath: "/images"
+}
+
+# Template data
+# Change these where appropriate
+site = {
+	title: "Startover",
+	description: "Startover is a boilerplate for developing static websites on your Mac. With Startover you don't have to start over!",
+	keywords: "template,static,website,s3"
+	url: "https://github.com/ksmandersen/startover",
+	fb: {
+		appName: "",
+		appId: ""
+	}
+}
+
+reload_script = '<script src="//{{ config.host }}:{{ config.port }}/livereload.js"></script>'
+
+# This is the path gulp will output all
+# generated and copied files to.
+build_path = "./public"
+
+# Suffix used for retina image assets
+retina_suffix = "_2x"
+
+# Paths used for input of generated files
+paths = {
+	# These files are copied directly into public/
+	copyfile: "{downloads/*,favicon.ico,apple-touch-icon.png}",
+	# Template handlebar files
+	handlebars: "./{**/,}*.handlebars",
+	# Sass files
+	sass: "assets/css/{**/,}*.{scss,sass}",
+	# Coffeescript files
+	coffee: "assets/js/**/*.coffee",
+	# Javascript files
+	js: "assets/js/**/*.js",
+	# Image files
+	images: "assets/images/**/*.{jpg,png}"
+}
+
+# Includes
+
 gulp = require 'gulp'
 tap = require 'gulp-tap'
 gutil = require 'gulp-util'
@@ -26,39 +75,9 @@ sourcemaps = require 'gulp-sourcemaps'
 reload = require 'gulp-livereload'
 
 
-config = {
-	port: 9091,
-	production: false
-	imgpath: "/images"
-}
-
-site = {
-	title: "Startover",
-	description: "Startover is a boilerplate for developing static websites on your Mac. With Startover you don't have to start over!",
-	keywords: "template,static,website,s3"
-	url: "https://github.com/ksmandersen/startover",
-	fb: {
-		appName: "",
-		appId: ""
-	}
-}
-
-reload_script = '<script src="//localhost:{{ config.port }}/livereload.js"></script>'
-
-build_path = "./public"
-
-paths = {
-	copyfile: "{downloads/*,favicon.ico,apple-touch-icon.png}",
-	handlebars: "./{**/,}*.handlebars",
-	sass: "assets/css/{**/,}*.{scss,sass}",
-	coffee: "assets/js/**/*.coffee",
-	js: "assets/js/**/*.js",
-	images: "assets/images/**/*.{jpg,png}"
-}
-
 retinaPath = (path) ->
 	comps = path.split('.')
-	"#{comps[0]}@2x.#{comps[1]}"
+	"#{comps[0]}#{retina_suffix}.#{comps[1]}"
 
 onError = (err) ->
 	console.log err
@@ -72,12 +91,14 @@ readPartial = (name) ->
 
 	val
 
+# Delete all files in the output directory
 gulp.task 'clean', (cb) ->
 	gulp.src(build_path)
 		.pipe(plumber { errorHandler: onError } )
 		.pipe(clean { force: false, read: true } )
-		
 
+# Compile Coffesscript files, generate source maps and
+# concat into app.js
 gulp.task 'coffee', ->
 	gulp.src(paths.coffee)
 		.pipe(sourcemaps.init())
@@ -88,7 +109,8 @@ gulp.task 'coffee', ->
 		.pipe(gulp.dest("#{build_path}/js"))
 		.pipe(reload())
 
-
+# Concatenate vendor javascript files and generate
+# source map.
 gulp.task 'jsvendor', ->
 	gulp.src(paths.js)
 		.pipe(sourcemaps.init())
@@ -101,8 +123,10 @@ gulp.task 'jsvendor', ->
 		.pipe(gulp.dest("#{build_path}/js/"))
 		.pipe(reload())
 
+# Process all script files
 gulp.task 'scripts', ['coffee', 'jsvendor']
 
+# Copy image files into /public/images
 gulp.task 'images', ->
 	gulp.src(paths.images)
 		.pipe(plumber({
@@ -111,10 +135,12 @@ gulp.task 'images', ->
 	.pipe(gulp.dest("#{build_path}/images"))
 		.pipe(reload())
 
+# Copy other static files into /public
 gulp.task 'copy', ->
 	gulp.src(paths.copyfile)
 		.pipe(copy(build_path))
 
+# Compile Sass into css
 gulp.task 'sass', ->
 	sass_paths = ['./assets/css/vendor/bourbon', './assets/css/vendor/neat']
 	sass_config = { 
@@ -134,6 +160,7 @@ gulp.task 'sass', ->
 		.pipe(gulp.dest("#{build_path}/css"))
 		.pipe(reload())
 
+# Compile handlebar files into html
 gulp.task 'html', ->
 	data = {
 		config: config,
@@ -177,6 +204,7 @@ gulp.task 'html', ->
 		.pipe(gulp.dest(build_path))
 		.pipe(reload())
 
+# Continously compile everything and livereload changes
 gulp.task 'watch', ->
 	reload.listen(config.port)
 

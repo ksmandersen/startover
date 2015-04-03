@@ -29,8 +29,15 @@ update:
 build:
 	gulp cleanbuild
 
+release:
+	gulp release
+
 watch:
 	gulp
 
 open:
 	powder open
+
+deploy:
+	make release \
+	&& s3_website push \
