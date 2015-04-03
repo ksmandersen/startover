@@ -184,7 +184,7 @@ gulp.task 'html', ->
 			img: (path, retina = true, cls = null) ->
 				rp = retinaPath(path)
 				str = "<img src=\"#{config.imgpath}/#{path}\""
-				str += " data-at2x=\"#{rp}\"" if retina
+				str += " data-at2x=\"#{config.imgpath}/#{rp}\"" if retina
 				str += " class=\"#{cls}\"" if typeof cls == 'string'
 				str += ">"
 
