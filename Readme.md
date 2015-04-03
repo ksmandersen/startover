@@ -1,6 +1,7 @@
 # Startover
 
 [![](https://travis-ci.org/ksmandersen/startover.svg)](https://travis-ci.org/ksmandersen/startover)
+[![David](https://img.shields.io/david/strongloop/express.svg)]()
 
 Startover is a highly opponiated boilerplate for developing static websites on your Mac using HTML5, Sass, Gulp and Pow. With Startover you don't have to start over!
 
