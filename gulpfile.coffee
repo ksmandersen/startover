@@ -92,7 +92,7 @@ readPartial = (name) ->
 
 # Delete all files in the output directory
 gulp.task 'clean', (cb) ->
-	clean(build_path)
+	clean(build_path, cb)
 
 # Compile Coffesscript files, generate source maps and
 # concat into app.js
@@ -218,8 +218,8 @@ gulp.task 'watch', ->
 gulp.task 'set-production', ->
 	config.production = true
 
-gulp.task 'cleanbuild', ->
-	runSeqeuence 'clean', 'build'
+gulp.task 'cleanbuild', (cb) ->
+	runSeqeuence 'clean', 'build', cb
 
 gulp.task 'build', ['html', 'sass', 'scripts', 'images', 'copy']
 gulp.task 'release', ['set-production', 'cleanbuild']
