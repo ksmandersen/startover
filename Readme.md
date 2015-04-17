@@ -24,6 +24,7 @@ Here are some sites that was built with Startover:
 * [thermodo.com](http://thermodo.com/) ([Source](http://github.com/robocat/thermodo.com))
 * [televisedapp.com](http://televisedapp.com/) ([Source](http://github.com/robocat/televisedapp.com))
 * [designdk.co](http://designdk.co/) ([Source](http://github.com/ksmandersen/designdk))
+* [cphfront.com](http://cphfront.com) ([Source](http://github.com/ksmandersen/cphfront.com))
 
 ## Requirements
 
