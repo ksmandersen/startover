@@ -26,6 +26,8 @@ Here are some sites that was built with Startover:
 * [designdk.co](http://designdk.co/) ([Source](http://github.com/ksmandersen/designdk))
 * [cphfront.com](http://cphfront.com) ([Source](http://github.com/ksmandersen/cphfront.com))
 
+If you're using Startover you should totally tell me so you can get featured here on this list of awesome sites (self-five).
+
 ## Requirements
 
 You need to have the following installed to use the code in this repository:
@@ -34,6 +36,14 @@ You need to have the following installed to use the code in this repository:
 * [Rubygems](http://rubygems.org/)
 * [Pow](http://pow.cx)
 * [NPM (Node Package manager)](https://npmjs.org/)
+
+The ease way to get Ruby and Node.js are with homebrew. Just run:
+
+```
+brew update & brew install ruby npm
+```
+
+For installing pow we recommend getting [Anvil for Mac](http://anvilformac.com/), it's free and pretty!
 
 ## Getting started
 
@@ -69,18 +79,10 @@ make release
 make deploy
 ```
 
-### Debugging remotely
-
-With pow and [xip.io](http://xip.io) you can reach your websites from any device within your local network. Say your local website is at ``mysite.dev`` and your local ip address is ``192.168.1.100`` then you pick your iPad and go to ``http://myapp.192.178.1.100.xip.io`` and test your website.
-
-If you need to test your site outside your local network you can do that to using [Forward](https://forwardhq.com/). The service is paid but definitely worth every penny.
-
-## Legal
-
-The source code for this project is released under the Open Source MIT License.
+## License
 
 The MIT License (MIT)
-Copyright (c) 2013 [Kristian Andersen](http://github.com/ksmandersen)
+Copyright (c) 2013-2015 [Kristian Andersen](http://github.com/ksmandersen)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
