@@ -137,8 +137,8 @@ gulp.task 'jsvendor', ->
 gulp.task 'scripts', ['coffee', 'jsvendor']
 
 # Copy image files into /public/images
-gulp.task 'images', ->
-	gulp.src(paths.images)
+gulp.task 'copyimage', ->
+	gulp.src([paths.images, "!*#{retina_suffix}.{jpg,png}"])
 		.pipe(plumber({
 			errorHandler: onError
 		}))
@@ -156,6 +156,8 @@ gulp.task 'unretina', ->
 		}))
 		.pipe(gulp.dest("#{build_path}/images"))
 		.pipe(reload())
+
+gulp.task 'images', ['copyimage', 'unretina']
 
 # Copy other static files into /public
 gulp.task 'copy', ->
