@@ -53,8 +53,10 @@ plumber = require 'gulp-plumber'
 runSeqeuence = require 'run-sequence'
 gif = require 'gulp-if'
 order = require 'gulp-order'
+newer = require 'gulp-newer'
 
 rename = require 'gulp-rename'
+path = require 'path'
 fs = require 'fs'
 clean = require 'del'
 copy = require 'gulp-copy'
@@ -62,6 +64,7 @@ copy = require 'gulp-copy'
 handlebars = require 'gulp-compile-handlebars'
 Handlebars = require 'handlebars'
 htmlmin = require 'gulp-minify-html'
+unretina = require 'gulp-unretina'
 
 sass = require 'gulp-sass'
 
@@ -78,6 +81,10 @@ retinaPath = (path) ->
 	comps = path.split('.')
 	"#{comps[0]}#{retina_suffix}.#{comps[1]}"
 
+unretinaPath = (path) ->
+	comps = path.split(retina_suffix)
+	"#{comps[0]}#{comps[1]}"
+
 onError = (err) ->
 	console.log err
 
@@ -89,6 +96,9 @@ readPartial = (name) ->
 	val = fs.readFileSync path, 'utf8' if isFile path
 
 	val
+
+hasNonRetinaVersion = (asset) ->
+	fs.existsSync unretinaPath(asset)
 
 # Delete all files in the output directory
 gulp.task 'clean', (cb) ->
@@ -132,7 +142,19 @@ gulp.task 'images', ->
 		.pipe(plumber({
 			errorHandler: onError
 		}))
-	.pipe(gulp.dest("#{build_path}/images"))
+		.pipe(gulp.dest("#{build_path}/images"))
+		.pipe(reload())
+
+gulp.task 'unretina', ->
+	gulp.src([paths.images, "*#{retina_suffix}.{png,jpg}"])
+		.pipe(newer({
+			dest: "#{build_path}/images",
+			map: unretinaPath
+		}))
+		.pipe(unretina({
+			suffix: retina_suffix
+		}))
+		.pipe(gulp.dest("#{build_path}/images"))
 		.pipe(reload())
 
 # Copy other static files into /public
