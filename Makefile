@@ -11,10 +11,13 @@ install:
 	&& make build \
 	&& powder link
 
+uninstall:
+	rm -rf node_modules \
+	&& rm -rf components \
+	&& make clean
+
 clean:
-	rm -rf ./node_modules \
-	&& rm -rf ./components \
-	&& rm -rf ./public
+	rm -rf ./public
 
 update:
 	npm update
