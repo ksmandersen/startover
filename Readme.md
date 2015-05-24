@@ -3,11 +3,11 @@
 [![](https://travis-ci.org/ksmandersen/startover.svg)](https://travis-ci.org/ksmandersen/startover)
 [![David](https://img.shields.io/david/strongloop/express.svg)]()
 
-Startover is a highly opponiated boilerplate for developing static websites on your Mac using HTML5, Sass, Gulp and Pow. With Startover you don't have to start over!
+Startover is a highly opinionated boilerplate for developing static websites on your Mac using HTML5, Sass, Gulp and Pow. With Startover you don't have to start over!
 
 ## Another boilerplate?
 
-I agree! We really don't need more boilerplates or frameworks for developing websites. Startover relies heavily on the works of others like [html5boilerplate](http://html5boilerplate.com/). However none of the boilerplates I've stumpled upon have been right for me. **Startover is not for everyone**. I created Startover to fit my workflow with the tools I like to use when developing websites. Starover can be used either as it is or as an inspiration for your development workflow.
+I agree! We really don't need more boilerplates or frameworks for developing websites. Startover relies heavily on the works of others like [html5boilerplate](http://html5boilerplate.com/). However none of the boilerplates I've stumbled upon have been right for me. **Startover is not for everyone**. I created Startover to fit my workflow with the tools I like to use when developing websites. Starover can be used either as it is or as an inspiration for your development workflow.
 
 A few disclaimeres:
 
@@ -37,7 +37,7 @@ You need to have the following installed to use the code in this repository:
 * [Pow](http://pow.cx)
 * [NPM (Node Package manager)](https://npmjs.org/)
 
-The ease way to get Ruby and Node.js are with homebrew. Just run:
+The easy way to get Ruby and Node.js is with homebrew. Just run:
 
 ```
 brew update & brew install ruby npm
