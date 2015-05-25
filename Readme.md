@@ -26,7 +26,7 @@ Here are some sites that was built with Startover:
 * [designdk.co](http://designdk.co/) ([Source](http://github.com/ksmandersen/designdk))
 * [cphfront.com](http://cphfront.com) ([Source](http://github.com/ksmandersen/cphfront.com))
 
-If you're using Startover you should totally tell me so you can get featured here on this list of awesome sites (self-five).
+If you're using Startover you can [create an issue](https://github.com/ksmandersen/startover/issues/new) so you can get featured here on this list of awesome sites (self-five).
 
 ## Requirements
 
