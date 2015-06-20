@@ -50,7 +50,7 @@ For installing pow we recommend getting [Anvil for Mac](http://anvilformac.com/)
 Clone the repository:
 
 ```bash
-git clone git@github.com:robocat/itsbreaking.com.git
+git clone git@github.com:ksmandersen/startover.git
 ```
 
 Install the project depencies for ruby gems and node packages:
