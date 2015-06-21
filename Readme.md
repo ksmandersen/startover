@@ -40,10 +40,10 @@ You need to have the following installed to use the code in this repository:
 The easy way to get Ruby and Node.js is with homebrew. Just run:
 
 ```
-brew update & brew install ruby npm
+brew update & brew install ruby pow npm
 ```
 
-For installing pow we recommend getting [Anvil for Mac](http://anvilformac.com/), it's free and pretty!
+If you like pow, you should check out [Anvil for Mac](http://anvilformac.com/), it's free and pretty!
 
 ## Getting started
 
