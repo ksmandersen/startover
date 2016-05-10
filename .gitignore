@@ -5,6 +5,8 @@
 .DS_Store
 .Spotlight-V100
 
+npm-debug.log
+
 build
 node_modules
 .env
