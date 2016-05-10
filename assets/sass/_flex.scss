@@ -1,0 +1,8 @@
+@mixin flex_container() {
+  margin: 0 auto;
+  max-width: $layout_max_width;
+}
+
+@mixin flex_wrapper() {
+  width: 100%;
+}

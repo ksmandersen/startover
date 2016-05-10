@@ -1,0 +1,21 @@
+@import "normalize";
+
+@import "_variables";
+@import "_functions";
+@import "_mixins";
+@import "_flex";
+
+html {
+  font-size: 62.5%;
+  font-family: $font_family_primary;
+}
+
+body, p, a, span, li, h1, h2, h3, h4 {
+  -webkit-font-smoothing: antialiased;
+}
+
+@include b(container) {
+  width: 100%;
+}
+
+@import "blocks/_header";

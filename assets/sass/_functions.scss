@@ -1,0 +1,24 @@
+@function parseInt($n) {
+  @return $n / ($n * 0 + 1);
+}
+
+@function containsModifier($selector) {
+    $selector: selectorToString($selector);
+    @if str-index($selector, $bem_separator_modifier) {
+        @return true;
+    } @else {
+        @return false;
+    }
+}
+
+@function selectorToString($selector) {
+    $selector: inspect($selector); //cast to string
+    $selector: str-slice($selector, 2, -2); //remove brackets
+    @return $selector;
+}
+
+@function getBlock($selector) {
+    $selector: selectorToString($selector);
+    $modifierStart: str-index($selector, $bem_separator_modifier) - 1;
+    @return str-slice($selector, 0, $modifierStart);
+}

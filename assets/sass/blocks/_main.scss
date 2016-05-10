@@ -1,0 +1,11 @@
+@include b(main) {
+  @include flex_container;
+  padding: 100px 10px;
+  text-align: center;
+
+  @include e(name) {
+    @include rem(font-size, 4rem);
+    font-weight: bold;
+    color: #212121;
+  }
+}
