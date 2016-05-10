@@ -5,7 +5,6 @@
 .DS_Store
 .Spotlight-V100
 
-public
+build
 node_modules
-components
 .env
