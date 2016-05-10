@@ -1,7 +1,8 @@
 # Startover
 
 [![](https://travis-ci.org/ksmandersen/startover.svg)](https://travis-ci.org/ksmandersen/startover)
-[![David](https://img.shields.io/david/strongloop/express.svg)]()
+[![node](https://img.shields.io/node/v/gh-badges.svg?maxAge=2592000)]()
+[![apm](https://img.shields.io/apm/l/vim-mode.svg?maxAge=2592000)]()
 
 Startover is a highly opponiated boilerplate for developing static websites on your Mac using HTML5, Sass, Gulp and Pow. With Startover you don't have to start over!
 
@@ -89,7 +90,7 @@ Docker container.
 ## License
 
 The MIT License (MIT)
-Copyright (c) 2013-2015 [Kristian Andersen](http://kristian.co)
+Copyright (c) 2013-2016 [Kristian Andersen](http://kristian.co)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
