@@ -4,7 +4,8 @@
   "description": "Startover is a boilerplate for developing static websites. With Startover you don't have to start over!",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Testing not supported\""
+    "start": "node app.js",
+    "dev": "gulp"
   },
   "repository": {
     "type": "git",
