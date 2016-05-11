@@ -56,7 +56,7 @@ function configure_bundler() {
 
   const browserify_opts = {
     entries: ['./assets/js/main.js'],
-    debug: !config.production
+    debug: true
   };
 
   if (config.watching) {
@@ -92,7 +92,7 @@ function bundle(bundler) {
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(gif(config.production, uglify()))
     .pipe(rename('bundle.js'))
-    .pipe(sourcemaps.write('./'))
+    .pipe(sourcemaps.write('./maps', {includeContent: true, sourceRoot: './assets/js'}))
     .pipe(gulp.dest(`${config.build}/js/`))
     .pipe(gif(config.watching, browserSync.stream({once: true})));
 }
