@@ -155,7 +155,7 @@ gulp.task('sass', () => {
     .pipe(sourcemaps.init())
     .pipe(sass(options))
     .pipe(autoprefixer({browsers: ['last 2 versions'], cascade: false}))
-    .pipe(sourcemaps.write('./maps', {includeContent: false, sourceRoot: './assets/sass'}))
+    .pipe(sourcemaps.write('./maps', {includeContent: true, sourceRoot: './assets/sass'}))
     .pipe(gulp.dest(`${config.build}/css`))
     .pipe(gif(config.watching, browserSync.stream({match: '**/*.css'})));
 });
