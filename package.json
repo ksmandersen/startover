@@ -24,7 +24,9 @@
     "gulp"
   ],
   "author": "Kristian Andersen <hello@kristian.co> (http://kristian.co)",
-  "contributors": ["dkhamsig (https://github.com/dkhamsing)"],
+  "contributors": [
+    "dkhamsig (https://github.com/dkhamsing)"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ksmandersen/startover/issues"
