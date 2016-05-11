@@ -194,10 +194,20 @@ gulp.task('html', () => {
     }
   };
 
+  let minOptions = {
+    collapseBooleanAttributes: true,
+    collapseWhitespace: true,
+    minifyURLs: true,
+    minifyJS: true,
+    removeComments: true,
+    removeEmptyAttributes: true,
+    removeRedundantAttributes: true
+  };
+
   return gulp.src(config.paths.html)
     .pipe(handlebars(data, options))
     .pipe(rename({extname: '.html'}))
-    .pipe(gif(config.production, htmlmin()))
+    .pipe(gif(config.production, htmlmin(minOptions)))
     .pipe(gulp.dest(config.build))
     .pipe(browserSync.stream());
 });
