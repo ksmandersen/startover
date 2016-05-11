@@ -1,6 +1,6 @@
 {
   "name": "startover",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Startover is a boilerplate for developing static websites. With Startover you don't have to start over!",
   "main": "app.js",
   "scripts": {
