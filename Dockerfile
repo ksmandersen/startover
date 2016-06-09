@@ -22,7 +22,7 @@ COPY assets /app/assets/
 COPY index.handlebars /app/
 COPY app.js /app/
 
-RUN gulp production
-CMD PORT=80 node app.js
+RUN npm run build-production
+CMD PORT=80 npm start
 
 EXPOSE 80
