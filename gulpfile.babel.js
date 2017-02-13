@@ -44,7 +44,10 @@ const config = {
     partials: './assets/templates/**/*.handlebars',
     images: './assets/images/**/*.{png,jpg,gif,svg}',
     sass: './assets/sass/**/*.{scss,sass}',
-    js: './assets/js/main.js'
+    js: './assets/js/main.js',
+    videos: './assets/videos/*.{webm,mp4}',
+    favicon: './assets/favicon/*{.png,jpg,svg}',
+    copyfiles: ['manifest.json','browserconfig.xml','favicon.ico']
   },
   production: false,
   watching: false,
@@ -184,6 +187,21 @@ gulp.task('unretina', () => {
 
 gulp.task('images', ['imagecopy', 'unretina']);
 
+gulp.task('videos', () => {
+  return gulp.src(config.paths.videos)
+    .pipe(gulp.dest(`${config.build}/videos`));
+});
+
+gulp.task('favicon', () => {
+  return gulp.src(config.paths.favicon)
+    .pipe(gulp.dest(`${config.build}/favicon`))
+});
+
+gulp.task('copyfiles', () => {
+  return gulp.src(config.paths.copyfiles)
+    .pipe(gulp.dest(config.build))
+});
+
 gulp.task('html', () => {
   const data = {
     config: config,
@@ -236,7 +254,7 @@ gulp.task('bundle', () => {
   return configure_bundler();
 });
 
-gulp.task('build', ['html', 'images', 'sass', 'bundle']);
+gulp.task('build', ['html', 'images', 'videos', 'favicon', 'copyfiles', 'sass', 'bundle']);
 gulp.task('production', ['set-production', 'build'])
 
 gulp.task('watch', ['sync'], () => {
@@ -247,6 +265,9 @@ gulp.task('watch', ['sync'], () => {
   gulp.watch(config.paths.partials, ['html']);
   gulp.watch(config.paths.images, ['images']);
   gulp.watch(config.paths.sass, ['sass']);
+  gulp.watch(config.paths.videos, ['videos']);
+  gulp.watch(config.paths.favicon, ['favicon']);
+  gulp.watch(config.paths.copyfiles, ['copyfiles']);
 });
 
 gulp.task('default', ['build', 'watch']);
