@@ -1,12 +1,14 @@
-# Compass / SASS generated cache files
+# Project
+build
+.env
+
+# Compass / SASS
 .sass-cache
 
-# OS X Specific files
+# MacOS
 .DS_Store
 .Spotlight-V100
 
-npm-debug.log
-
-build
+# Node, NPM
 node_modules
-.env
+npm-debug.log
