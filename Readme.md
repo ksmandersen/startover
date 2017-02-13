@@ -15,6 +15,17 @@ A few disclaimers:
 * Startover is based on my workflow and how I work with static site development. I don't expect the code to be usable for anyone else but if you can use it that makes me happy!
 * The code in this repository is mostly undocumented. That means if you have no idea what some of the code do or just have a question, then just open up a new issue and I will try to respond.
 
+The code in this repo assumes that you're familiar with the following technologies:
+
+* [Gulp](http://gulpjs.com/). A toolkit for automating tasks like moving, copying, building or otherwise manipulating files.
+* [Sass](http://sass-lang.com/). A superset of CSS that enables nesting, functions, mixins and more.
+* [Handlebars](http://handlebarsjs.com/). A templating language for HTML written in Javascript.
+* [Express](http://expressjs.com/). A simple web server written running on node.js
+* [Babel](https://babeljs.io/). A compiler that generates web browser supported Javascript from your ES2015/ES2016 code.
+* [Dokku](https://github.com/dokku/dokku). A docker powered PaaS server. (Basically allows you to have your own Heroku server).
+
+Other technologies used in this boilerplate: [BrowserSync](https://browsersync.io/), [Browserify](http://browserify.org/), [jQuery](https://jquery.com/), [Ladda](http://lab.hakim.se/ladda/), [normalize.css](https://necolas.github.io/normalize.css/), [retina.js](http://imulus.github.io/retinajs/), [Watchify](https://github.com/substack/watchify).
+
 ## Startover in the wild
 
 Here are some sites that uses Starover 2.0:
