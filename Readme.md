@@ -4,7 +4,7 @@
 [![node](https://img.shields.io/node/v/gh-badges.svg?maxAge=2592000)]()
 [![apm](https://img.shields.io/apm/l/vim-mode.svg?maxAge=2592000)]()
 
-Startover is a highly opponiated boilerplate for developing static websites on your Mac using HTML5, Sass, Gulp and Pow. With Startover you don't have to start over!
+Startover is a highly opinionated boilerplate for developing static websites on your Mac using HTML5, Sass, Gulp and ES2015. With Startover you don't have to start over!
 
 ## Another boilerplate?
 
@@ -84,8 +84,7 @@ npm run build-production
 
 I've been using [Dokku](http://dokku.viewdocs.io/dokku/) for some time to deploy this stack.
 The repo includes a simple nodejs server app running on express to serve the static content of the
-site. Dokku supports Docker which this repo uses. You can most likely deploy this code to any ol'
-Docker container.
+site. You should be able to deploy the code anywhere that accepts a simple nodejs app, like Heroku.
 
 ## License
 
