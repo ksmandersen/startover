@@ -9,3 +9,13 @@
     color: #212121;
   }
 }
+
+@include breakpoint(768px) {
+  @include b(main) {
+    padding: 50px 10px;
+
+    @include e(name) {
+      @include rem(font-size, 2rem);
+    }
+  }
+}

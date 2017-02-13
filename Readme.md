@@ -19,6 +19,7 @@ The code in this repo assumes that you're familiar with the following technologi
 
 * [Gulp](http://gulpjs.com/). A toolkit for automating tasks like moving, copying, building or otherwise manipulating files.
 * [Sass](http://sass-lang.com/). A superset of CSS that enables nesting, functions, mixins and more.
+* [BEM](http://getbem.com/). A strategy for naming CSS classes and HTML elements in a modular reusable fashion.
 * [Handlebars](http://handlebarsjs.com/). A templating language for HTML written in Javascript.
 * [Express](http://expressjs.com/). A simple web server written running on node.js
 * [Babel](https://babeljs.io/). A compiler that generates web browser supported Javascript from your ES2015/ES2016 code.
