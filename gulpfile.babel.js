@@ -123,7 +123,7 @@ function load_partial(name) {
   return null;
 }
 
-function image_helper(path, cls = null, has_retina = true) {
+function image_helper(path, cls = null, alt = "", has_retina = true) {
   const retina = retina_path(path);
   var str = `<img src="/images/${path}"`;
   if (retina) {
@@ -131,6 +131,9 @@ function image_helper(path, cls = null, has_retina = true) {
   }
   if (typeof cls === 'string') {
     str += ` class="${cls}"`;
+  }
+  if (typeof alt === 'string' && alt != "") {
+    str += ` alt="${alt}"`;
   }
   str += ">";
 
