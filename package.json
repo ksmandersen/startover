@@ -36,6 +36,7 @@
     "node": ">=5.9.0"
   },
   "dependencies": {
+    "compression": "^1.6.2",
     "express": "^4.13.4",
     "jquery": "^2.2.2",
     "ladda": "^1.0.0",
