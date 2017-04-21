@@ -4,7 +4,7 @@ var compression = require('compression');
 const build = `${__dirname}/build`;
 const port = process.env.PORT || 3000;
 
-onst app = express();
+const app = express();
 
 app.use(compression());
 app.use(express.static(build));
